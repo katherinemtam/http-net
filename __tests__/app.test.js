@@ -13,7 +13,8 @@ describe('app routes', () => {
   test('/echo, POST status code 200 and plain text with the request body', async() => {
 
     const res = await request(app)
-      .post('/echo');
+      .post('/echo')
+      .send('hello');
 
     expect(res.status).toEqual(200);
     expect(res.text).toEqual('hello');
