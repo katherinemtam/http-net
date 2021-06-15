@@ -27,4 +27,12 @@ describe('app routes', () => {
 
     expect(res.text).toEqual('<h1>red</h1>');
   });
+
+  test('/green, GET html with an h1 and the word green', async() => {
+
+    const res = await request(app)
+      .get('/green');
+
+    expect(res.text).toEqual('<h1>green</h1>');
+  });
 });
