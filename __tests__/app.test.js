@@ -43,4 +43,12 @@ describe('app routes', () => {
 
     expect(res.text).toEqual('<h1>blue</h1>');
   });
+
+  test('/index.html, GET content from index.html file under public directory', async() => {
+
+    const res = await request(app)
+      .get('/index.html');
+
+    expect(res.text).toEqual('<h1>Hello!</h1>\r\n');
+  });
 });
