@@ -49,6 +49,6 @@ describe('app routes', () => {
     const res = await request(app)
       .get('/index.html');
 
-    expect(res.text).toEqual('<h1>Hello!</h1>\r\n');
+    expect(res.text).toEqual('<h1>Hello!</h1>');
   });
 });
